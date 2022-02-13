@@ -1,18 +1,21 @@
 import { Container } from "react-bootstrap";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import { Header, Footer } from "./components/index";
-import { Home } from "./pages/";
+import { HomePage, ProductPage } from "./pages/";
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Header />
       <main className="py-3">
         <Container>
-          <Home />
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/product/:id" component={ProductPage} />
         </Container>
       </main>
       <Footer />
-    </div>
+    </Router>
   );
 }
 

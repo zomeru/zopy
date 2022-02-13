@@ -1,9 +1,9 @@
 import { Row, Col } from "react-bootstrap";
 
 import products from "../products";
-import { Product } from "../components/";
+import { Product } from "../components";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div>
       <h1>Latest Products</h1>
@@ -20,4 +20,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;
