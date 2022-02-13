@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from "react-bootstrap";
 
 import { IProduct } from "../products";
+import { Rating } from "../components";
 
 const Product = (product: IProduct) => {
   return (
@@ -19,7 +20,11 @@ const Product = (product: IProduct) => {
 
         <Card.Text as="div">
           <div className="my-3">
-            {product.rating} rating / {product.numReviews} reviews
+            <Rating
+              value={product.rating}
+              text={`${product.numReviews} reviews`}
+              color="#dfce12"
+            />
           </div>
         </Card.Text>
 
