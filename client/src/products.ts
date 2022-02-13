@@ -11,7 +11,7 @@ export interface IProduct {
   numReviews: number;
 }
 
-const products: IProduct[] = [
+export const products: IProduct[] = [
   {
     _id: "1",
     name: "Airpods Wireless Bluetooth Headphones",
