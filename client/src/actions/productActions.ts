@@ -2,14 +2,14 @@ import { Dispatch } from "redux";
 import axios from "axios";
 
 import {
-  ProductListRequest,
   ActionProductListTypes,
   PRODUCT_LIST_REQUEST,
   PRODUCT_LIST_SUCCESS,
   PRODUCT_LIST_FAIL,
 } from "./types";
+import { IProduct } from "../types";
 
-const listProducts =
+export const listProducts =
   () => async (dispatch: Dispatch<ActionProductListTypes>) => {
     try {
       dispatch({ type: PRODUCT_LIST_REQUEST });
@@ -18,7 +18,7 @@ const listProducts =
 
       dispatch({
         type: PRODUCT_LIST_SUCCESS,
-        payload: data as ProductListRequest,
+        payload: data as IProduct[],
       });
     } catch (error) {
       const err: any = error;

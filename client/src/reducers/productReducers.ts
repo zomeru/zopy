@@ -1,19 +1,26 @@
 import {
-  ProductListRequest,
   ActionProductListTypes,
   PRODUCT_LIST_REQUEST,
   PRODUCT_LIST_SUCCESS,
   PRODUCT_LIST_FAIL,
 } from "../actions/types/";
+import { IProduct } from "../types";
 
-export const defaultState: ProductListRequest = {
+export interface ProductListState {
+  loading: boolean;
+  products?: IProduct[];
+  error?: any;
+}
+
+export const defaultState: ProductListState = {
+  loading: true,
   products: [],
 };
 
 export const productListReducer = (
-  state: ProductListRequest = defaultState,
+  state: ProductListState = defaultState,
   action: ActionProductListTypes
-) => {
+): ProductListState => {
   switch (action.type) {
     case PRODUCT_LIST_REQUEST:
       return { loading: true, products: [] };
