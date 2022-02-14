@@ -11,7 +11,7 @@ const Rating = ({ value, text, color }: RatingProps) => {
     <div className="rating">
       {new Array(5).fill(0).map((_, i) => {
         return (
-          <span>
+          <span key={i}>
             <i
               style={{ color }}
               className={

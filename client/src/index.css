@@ -5,6 +5,7 @@ main {
 a,
 a:link {
   text-decoration: none;
+  color: white;
 }
 
 h3 {
