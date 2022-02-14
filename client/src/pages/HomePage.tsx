@@ -12,7 +12,6 @@ const HomePage = () => {
     async function getProducts() {
       const { data } = await axios.get("/api/products");
       setProducts(data);
-      console.log("data", data);
     }
 
     getProducts();
