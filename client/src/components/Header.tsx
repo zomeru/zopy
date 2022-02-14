@@ -13,12 +13,12 @@ const Header = () => {
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
               <Link to="cart">
-                <Nav.Link as="p">
+                <Nav.Link as="p" className="mt-3">
                   <i className="fas fa-shopping-cart"></i>Cart
                 </Nav.Link>
               </Link>
               <Link to="/login">
-                <Nav.Link as="p">
+                <Nav.Link as="p" className="mt-3">
                   <i className="fas fa-user"></i>Login
                 </Nav.Link>
               </Link>
