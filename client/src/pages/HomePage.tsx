@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Row, Col } from "react-bootstrap";
 
@@ -12,8 +12,6 @@ const HomePage = () => {
   const productList = useSelector((state: RootStore) => state.productList);
 
   const { error, loading, products } = productList;
-
-  console.log("PRODUCRT LIST", productList);
 
   useEffect(() => {
     dispatch(listProducts());
